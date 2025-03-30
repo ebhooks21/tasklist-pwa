@@ -28,6 +28,7 @@
 		<!-- JS Files for the application -->
 		<script type="text/javascript" src="js/Controllers/MainViewController.js"></script>
 		<script type="text/javascript" src="js/Controllers/AddNewTaskFormController.js"></script>
+		<script type="text/javascript" src="js/Controllers/TaskListingController.js"></script>
 		<script type="text/javascript" src="js/Models/Task.js"></script>
 		<script type="text/javascript" src="js/app/App.js"></script>
 	</head>
@@ -51,12 +52,19 @@
 				<div class="content">
 					<h1>Tasks</h1>
 
-					<table class="table-striped">
+					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th scope="row">#</th>
+								<th scope="col">#</th>
+								<th scope="col">Name</th>
+								<th scope="col">Due Date</th>
+								<th scope="col">Actions</th>
 							</tr>
 						</thead>
+
+						<tbody id="tasksarea-listing">
+
+						</tbody>
 					</table>
 
 					<button id="addnewtask-btn" class="btn btn-lg btn-primary col-lg-2 col-md-4 addnewtask-btn mainview-clickable"><i class="bi bi-plus-circle"></i> Add New Task</button>

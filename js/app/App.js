@@ -19,6 +19,9 @@ class App {
 
 		//Create the add new task view controller
 		self.adtvc = new AddNewTaskFormController(self);
+
+		//Create the task listing controller
+		self.tlc = new TaskListingController(self);
 	}
 
 	/**
@@ -29,6 +32,9 @@ class App {
 
 		(self.mvc).initialize();
 		(self.adtvc).initialize();
+
+		//List the tasks
+		self.showTaskListing();
 	}
 
 	/**
@@ -97,5 +103,14 @@ class App {
 		}
 
 		return ++currId;
+	}
+
+	/**
+	 * Function to list the tasks.
+	 */
+	showTaskListing() {
+		let self = this;
+
+		(self.tlc).renderTaskListing(self.taskList);
 	}
 }

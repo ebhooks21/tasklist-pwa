@@ -76,6 +76,9 @@ class MainViewController {
 
 		//Show the task list area
 		$('#tasksarea').show();
+
+		//Show the task listing
+		(self.app).showTaskListing();
 	}
 
 	/**
