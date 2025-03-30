@@ -81,4 +81,21 @@ class App {
 			}
 		}
 	}
+
+	/**
+	 * Function to get the next task id.
+	 */
+	getNextTaskId() {
+		let self = this;
+
+		let currId = 0;
+
+		for(let t in self.taskList) {
+			if((self.taskList[t]).id > currId) {
+				currId = (self.taskList[t]).id;
+			}
+		}
+
+		return ++currId;
+	}
 }
