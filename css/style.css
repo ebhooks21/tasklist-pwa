@@ -42,7 +42,9 @@ div.mainview {
 
 button.addnewtask-btn {
 	bottom: 0;
+	height: 70px;
 	position: absolute;
 	margin: 0px 1% 10px auto;
 	right: 0;
+	z-index: 5;
 }
