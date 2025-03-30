@@ -79,6 +79,7 @@ class AddNewTaskFormController {
 		//Get the contents of the form
 		let taskName = $('#addnewtask-name').val();
 		let taskDueDate = $('#addnewtask-date').val();
+		let taskId = (self.app).getNextTaskId();
 
 		if(taskName.length < 1) {
 			alert("A Task must have a name.");
@@ -89,7 +90,7 @@ class AddNewTaskFormController {
 			try {
 				taskDueDate = new Date(taskDueDate + "T00:00");
 
-				let newTask = new Task(taskName, taskDueDate);
+				let newTask = new Task(taskId, taskName, taskDueDate);
 
 				//Add the new task to the list
 				(self.app).addNewTask(newTask);
