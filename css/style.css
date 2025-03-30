@@ -48,3 +48,7 @@ button.addnewtask-btn {
 	right: 0;
 	z-index: 5;
 }
+
+div.content {
+	margin-left: 10px;
+}
