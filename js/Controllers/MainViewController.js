@@ -65,6 +65,26 @@ class MainViewController {
 		self.hideAllViewableAreas();
 
 		//Show the new task area
+		self.showAddNewTaskArea();
+	}
+
+	/**
+	 * Funciton to show the task list area.
+	 */
+	showTaskListArea() {
+		let self = this;
+
+		//Show the task list area
+		$('#tasksarea').show();
+	}
+
+	/**
+	 * Funtion to show the add new task area.
+	 */
+	showAddNewTaskArea() {
+		let self = this;
+
+		//Show the new task area
 		$('.addnewtaskarea').show();
 	}
 }
