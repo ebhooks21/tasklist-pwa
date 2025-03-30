@@ -15,7 +15,7 @@ class App {
 		self.taskList = [];
 
 		//Create a new MainViewController
-		self.mvc = new MainViewController();
+		self.mvc = new MainViewController(self);
 	}
 
 	/**

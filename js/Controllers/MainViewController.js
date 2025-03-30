@@ -8,8 +8,11 @@ class MainViewController {
 	/**
 	 * Main constructor for the MainViewController class.
 	 */
-	constructor() {
+	constructor(app) {
 		let self = this;
+
+		//Setup an app reference
+		self.app = app;
 	}
 
 	/**
@@ -45,9 +48,23 @@ class MainViewController {
 	}
 
 	/**
+	 * Function to hide all viewable areas.
+	 */
+	hideAllViewableAreas() {
+		//Hide all viewable areas
+		$('.viewablearea').hide();
+	}
+
+	/**
 	 * Function for the add new task button onclick.
 	 */
 	addNewTaskButtonOnClick() {
-		alert("HERE");
+		let self = this;
+
+		//Hide all viewable areas
+		self.hideAllViewableAreas();
+
+		//Show the new task area
+		$('.addnewtaskarea').show();
 	}
 }
