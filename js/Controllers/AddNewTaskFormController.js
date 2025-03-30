@@ -87,7 +87,7 @@ class AddNewTaskFormController {
 
 		else {
 			try {
-				taskDueDate = new Date(taskDueDate);
+				taskDueDate = new Date(taskDueDate + "T00:00");
 
 				let newTask = new Task(taskName, taskDueDate);
 
