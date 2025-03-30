@@ -40,5 +40,16 @@ class App {
 		return tempTask;
 	}
 
+	/**
+	 * Function to remove a task from the task list by id.
+	 */
+	removeTaskById(id) {
+		let self = this;
 
+		for(let t in self.taskList) {
+			if(taskList[t].id == id) {
+				delete taskList[t];
+			}
+		}
+	}
 }
