@@ -13,6 +13,18 @@ class App {
 
 		//Define an array for the tasks
 		self.taskList = [];
+
+		//Create a new MainViewController
+		self.mvc = new MainViewController();
+	}
+
+	/**
+	 * Function to start the application.
+	 */
+	start() {
+		let self = this;
+
+		(self.mvc).initialize();
 	}
 
 	/**
