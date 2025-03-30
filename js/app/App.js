@@ -52,4 +52,17 @@ class App {
 			}
 		}
 	}
+
+	/**
+	 * Function to modify a task.
+	 */
+	modifyTask(task) {
+		let self = this;
+
+		for(let t in self.taskList) {
+			if(taskList[t].id == task.id) {
+				taskList[t] = task;
+			}
+		}
+	}
 }
