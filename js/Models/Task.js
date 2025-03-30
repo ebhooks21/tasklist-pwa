@@ -15,15 +15,4 @@ class Task {
 		self.dueDate = dueDate;
 		self.completed = false;
 	}
-
-	/**
-	 * Empty constructor for the Task class.
-	 */
-	constructor() {
-		let self = this;
-
-		self.taskName = "";
-		self.dueDate = null;
-		self.completed = false;
-	}
 }

@@ -16,6 +16,9 @@ class App {
 
 		//Create a new MainViewController
 		self.mvc = new MainViewController(self);
+
+		//Create the add new task view controller
+		self.adtvc = new AddNewTaskFormController(self);
 	}
 
 	/**
@@ -25,6 +28,7 @@ class App {
 		let self = this;
 
 		(self.mvc).initialize();
+		(self.adtvc).initialize();
 	}
 
 	/**

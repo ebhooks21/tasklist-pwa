@@ -4,7 +4,7 @@
  * Date: 03/29/2025
  */
 
-class AddNewTaskController {
+class AddNewTaskFormController {
 	/**
 	 * Main constructor for the AddNewTaskController.
 	 */
@@ -66,6 +66,47 @@ class AddNewTaskController {
 
 		//Show the taskview area
 		((self.app).mvc).showTaskListArea();
+
+		return false;
+	}
+
+	/**
+	 * Function for the onclick of the add new task form add button.
+	 */
+	addNewTaskFormAddButtonOnClick() {
+		let self = this;
+
+		//Get the contents of the form
+		let taskName = $('#addnewtask-name').val();
+		let taskDueDate = $('#addnewtask-date').val();
+
+		if(taskName.length < 1) {
+			alert("A Task must have a name.");
+			$('#addnewtask-name').focus();
+		}
+
+		else {
+			try {
+				taskDueDate = new Date(taskDueDate);
+
+				let newTask = new Task(taskName, taskDueDate);
+
+				//Add the new task to the list
+				(self.app).addNewTask(newTask);
+
+				alert("Success");
+
+				//Close the form, using the cancel button
+				$('#addnewtask-cancelbtn').trigger('click');
+			}
+
+			catch(err) {
+				alert("There was an error with the entered date.  Please try again.");
+				$('#addnewtask-date').focus();
+			}
+		}
+
+		return false;
 	}
 
 	/**
