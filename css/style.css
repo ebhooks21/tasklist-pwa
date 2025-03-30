@@ -39,3 +39,10 @@ div.mainview {
 	float: right;
 	height: 100vh;
 }
+
+button.addnewtask-btn {
+	bottom: 0;
+	position: absolute;
+	margin: 0px 1% 10px auto;
+	right: 0;
+}
