@@ -14,4 +14,31 @@ class App {
 		//Define an array for the tasks
 		self.taskList = [];
 	}
+
+	/**
+	 * Function to add a task to the task list.
+	 */
+	addNewTask(newTask) {
+		let self = this;
+
+		(self.taskList).push(newTask);
+	}
+
+	/**
+	 * Function to get a task from the tasklist by id.
+	 */
+	getTaskById(id) {
+		let self = this;
+		let tempTask = null;
+
+		for(let t in self.taskList) {
+			if(taskList[t].id == id) {
+				tempTask = taskList[t];
+			}
+		}
+
+		return tempTask;
+	}
+
+
 }
