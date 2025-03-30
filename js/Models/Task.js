@@ -8,9 +8,10 @@ class Task {
 	/**
 	 * Main constructor for the Task class.
 	 */
-	constructor(taskName, dueDate) {
+	constructor(id, taskName, dueDate) {
 		let self = this;
 
+		self.id = id;
 		self.taskName = taskName;
 		self.dueDate = dueDate;
 		self.completed = false;
