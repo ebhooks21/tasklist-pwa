@@ -1,0 +1,55 @@
+<!--
+	Main display file for the tasklist application as a single page PWA.
+	Author: Eric Hooks
+	Date: 03/29/2025
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>StoryKeeper</title>
+
+		<!-- Favicon -->
+		 <link rel="icon" href="images/favicon.png">
+
+		<!-- Bootswatch Darkly theme -->
+		<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.rtl.min.css" rel="stylesheet">
+
+		<!-- Bootstrap Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+		<!-- JS Files for the application -->
+		<script type="text/javascript" src="js/app/Main.js"></script>
+	</head>
+
+	<body>
+		<div class="sidebar col-lg-2 col-sm-4 bg-secondary">
+			<div class="bg-info titlearea text-center" id="titlearea">
+
+				<span>TaskList</span>	
+			</div>
+
+			<div class="sidebar-nav col-12">
+				<ul class="sidebar-nav-list text-center bg-primary fs-3 col-12" id="sidebar-nav-list">
+					<li class="col-12">Tasks</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mainview col-lg-10 col-sm-8" id="mainview">
+			<div class="viewablearea taskssarea" id="tasksarea">
+				<button id="addnewtask-btn" class="btn btn-lg btn-primary"><i class="bi bi-plus-circle"></i></button>
+			</div> 
+		</div>	
+	</body>
+
+	<script type="text/javascript">
+		start();	
+	</script>
+</html>

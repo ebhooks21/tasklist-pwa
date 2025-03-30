@@ -1,0 +1,41 @@
+body {
+	display: block;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+div.sidebar {
+	display: block;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+	div.sidebar img.sidebar-img {
+		display: block;
+		border-bottom: 1px solid white;
+		height: auto;
+		width: 100%;
+	}
+	div.sidebar div.titlearea span {
+		font-size: calc(1.525rem + 1vw);
+	}
+		div.sidebar div.sidebar-nav ul.sidebar-nav-list {
+			list-style: none;	
+			margin: .5% 0;
+			padding: 0 0;
+		}
+			div.sidebar div.sidebar-nav ul.sidebar-nav-list li:hover {
+				background-color: white;
+				color: black;
+				cursor: pointer;
+			}
+
+div.mainview {
+	display: block;
+	float: right;
+	height: 100vh;
+}
