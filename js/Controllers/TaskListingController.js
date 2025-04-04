@@ -43,7 +43,7 @@ class TaskListingController {
 		let html = "";
 		let date = "";
 
-		if(taskList.length <= 1) {
+		if(taskList.length < 1) {
 			html += "<tr>";
 
 			html += "<th scope='row'>There are currently no tasks in your list.</th>";
